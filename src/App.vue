@@ -44,13 +44,13 @@ onMounted(async () => {
 
 const resumen = computed(() => {
   let text = '';
-  if (numPeople) {
+  if (numPeople.value) {
     text += `${ numPeople.value } personas `;
-    if (numDays) {
+    if (numDays.value) {
       text += `durante ${ numDays.value } dias `;
-      if (destination) {
+      if (destination.value) {
         text += `en ${ destination.value } `;
-        if (accommodation) {
+        if (accommodation.value) {
           text += `alojandose en ${ accommodation.value }`;
         }
       }

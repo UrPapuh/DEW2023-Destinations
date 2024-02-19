@@ -21,8 +21,8 @@ onMounted(() => {
 });
 
 watch(amount, (num) => {
-  if(num < 1) amount.value = 1;
-  if(num > 10) amount.value = 10;
+  if(num < props.min) amount.value = props.min;
+  if(num > props.max) amount.value = props.max;
   emit('changeAmount', amount.value);
 });
 </script>
